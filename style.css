@@ -1940,4 +1940,349 @@ footer {
     }
 
 }
+/* =========================================
+   UPCOMING BOOKS
+   ========================================= */
 
+.upcoming-books-section {
+    background: #f4ecdc;
+
+    padding: 120px 8% 150px;
+
+    display: grid;
+    grid-template-columns: 30% 70%;
+
+    gap: 40px;
+
+    overflow: hidden;
+}
+
+
+/* HEADING */
+
+.upcoming-books-heading {
+    padding-top: 20px;
+}
+
+.upcoming-books-heading h2 {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(55px, 5vw, 85px);
+
+    font-weight: 400;
+
+    line-height: .9;
+
+    letter-spacing: -2px;
+
+    margin: 45px 0 0;
+}
+
+.upcoming-books-note {
+    font-family: "Caveat", cursive;
+
+    font-size: 24px;
+
+    line-height: 1;
+
+    color: #713442;
+
+    margin-top: 40px;
+
+    transform: rotate(-4deg);
+
+    display: inline-block;
+}
+
+
+/* BOOK GRID */
+
+.upcoming-books-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 70px;
+
+    align-items: start;
+
+    padding-top: 20px;
+}
+
+
+/* BOOK */
+
+.upcoming-book {
+    max-width: 330px;
+}
+
+
+/* PLACEHOLDER COVER */
+
+.upcoming-book-cover {
+    position: relative;
+
+    width: 100%;
+
+    aspect-ratio: 2 / 3;
+
+    background: #faf8f1;
+
+    border: 1px solid rgba(50, 40, 30, .12);
+
+    box-shadow:
+        0 12px 22px rgba(55, 45, 35, .10),
+        0 3px 6px rgba(55, 45, 35, .06);
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    overflow: hidden;
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease;
+}
+
+
+/* SLIGHTLY DIFFERENT PAPER TILT */
+
+.four-walls-cover {
+    transform: rotate(-2deg);
+}
+
+.universe-cover {
+    transform: rotate(2deg);
+
+    background: #faf8f1;
+}
+
+
+/* HOVER */
+
+.upcoming-book:hover .four-walls-cover {
+    transform: rotate(-1deg) translateY(-6px);
+}
+
+.upcoming-book:hover .universe-cover {
+    transform: rotate(1deg) translateY(-6px);
+}
+
+.upcoming-book:hover .upcoming-book-cover {
+    box-shadow:
+        0 18px 30px rgba(55, 45, 35, .14),
+        0 4px 8px rgba(55, 45, 35, .08);
+}
+
+
+/* COVER TYPOGRAPHY */
+
+.placeholder-title {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(22px, 2.2vw, 32px);
+
+    line-height: .95;
+
+    letter-spacing: .04em;
+
+    color: #292323;
+
+    max-width: 85%;
+}
+
+
+.placeholder-small {
+    font-family: "Caveat", cursive;
+
+    font-size: 17px;
+
+    color: #713442;
+
+    margin-bottom: 25px;
+
+    transform: rotate(-4deg);
+}
+
+
+.placeholder-author {
+    position: absolute;
+
+    bottom: 35px;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 8px;
+
+    letter-spacing: .25em;
+
+    color: #716963;
+}
+
+
+.placeholder-geese {
+    position: absolute;
+
+    bottom: 75px;
+
+    font-family: "Caveat", cursive;
+
+    font-size: 27px;
+
+    color: #713442;
+
+    opacity: .65;
+
+    transform: rotate(-5deg);
+}
+
+
+/* BOOK INFO */
+
+.upcoming-book-info {
+    padding: 35px 5px 0;
+}
+
+
+.upcoming-book-genre {
+    font-family: "Manrope", sans-serif;
+
+    font-size: 9px;
+
+    letter-spacing: .15em;
+
+    color: #713442;
+
+    margin-bottom: 18px;
+}
+
+
+.upcoming-book-info h3 {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 32px;
+
+    font-weight: 500;
+
+    line-height: .95;
+
+    margin: 0 0 17px;
+
+    color: #292323;
+}
+
+
+.upcoming-book-info > p:not(.upcoming-book-genre) {
+    font-family: "Manrope", sans-serif;
+
+    font-size: 11px;
+
+    line-height: 1.6;
+
+    color: #7b726b;
+
+    max-width: 270px;
+
+    margin-bottom: 22px;
+}
+
+
+/* STATUS */
+
+.upcoming-status {
+    font-family: "Caveat", cursive;
+
+    font-size: 20px;
+
+    color: #713442;
+
+    transform: rotate(-2deg);
+
+    display: inline-block;
+}
+
+
+/* =========================================
+   UPCOMING BOOKS MOBILE
+   ========================================= */
+
+@media (max-width: 800px) {
+
+    .upcoming-books-section {
+        display: block;
+
+        padding:
+            90px
+            22px
+            110px;
+    }
+
+
+    .upcoming-books-heading {
+        margin-bottom: 65px;
+    }
+
+
+    .upcoming-books-heading h2 {
+        font-size: 62px;
+
+        margin-top: 30px;
+
+        letter-spacing: -1.5px;
+    }
+
+
+    .upcoming-books-note {
+        font-size: 22px;
+
+        margin-top: 30px;
+    }
+
+
+    .upcoming-books-grid {
+        grid-template-columns: 1fr;
+
+        gap: 85px;
+
+        padding-top: 0;
+
+        justify-items: center;
+    }
+
+
+    .upcoming-book {
+        width: min(330px, 82vw);
+
+        max-width: none;
+    }
+
+
+    .upcoming-book-cover {
+        width: 100%;
+    }
+
+
+    .upcoming-book-info {
+        padding-top: 32px;
+    }
+
+
+    .upcoming-book-info h3 {
+        font-size: 31px;
+    }
+
+
+    .upcoming-book-info > p:not(.upcoming-book-genre) {
+        font-size: 11px;
+
+        max-width: 290px;
+    }
+
+}
