@@ -1756,3 +1756,188 @@ footer {
     }
 
 }
+/* =========================
+   BOOK LINKS PAGE
+========================= */
+
+.book-links-page {
+    min-height: 100vh;
+    padding: 120px 9vw 130px;
+    background: #f4ecdd;
+    box-sizing: border-box;
+}
+
+.book-links-page .section-label {
+    margin-bottom: 35px;
+}
+
+.book-links-page h1 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(70px, 8vw, 120px);
+    font-weight: 400;
+    line-height: 0.88;
+    letter-spacing: -0.04em;
+    margin: 0;
+    color: #292322;
+}
+
+.book-links-note {
+    font-family: "Caveat", cursive;
+    font-size: 28px;
+    color: #743344;
+    margin: 35px 0 80px;
+}
+
+
+/* COVER + LINKS */
+
+.book-links-layout {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 110px;
+    align-items: center;
+    max-width: 1050px;
+    margin: 0 auto;
+}
+
+
+/* BOOK */
+
+.book-links-cover {
+    width: 280px;
+    transform: rotate(-3deg);
+    filter: drop-shadow(0 18px 18px rgba(55, 42, 32, 0.14));
+}
+
+.book-links-cover img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+
+/* LINKS */
+
+.book-links-content {
+    max-width: 570px;
+}
+
+.book-links-intro {
+    font-family: "Manrope", sans-serif;
+    font-size: 16px;
+    line-height: 1.8;
+    color: #514843;
+    margin-bottom: 35px;
+}
+
+
+.book-store-links {
+    border-top: 1px solid rgba(55, 45, 38, 0.2);
+}
+
+
+.book-store-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 25px 5px;
+
+    border-bottom: 1px solid rgba(55, 45, 38, 0.2);
+
+    color: #292322;
+    text-decoration: none;
+
+    font-family: "Manrope", sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.16em;
+
+    transition:
+        padding-left 0.25s ease,
+        color 0.25s ease;
+}
+
+.book-store-link:hover {
+    padding-left: 12px;
+    color: #743344;
+}
+
+
+/* GOOGLE PLAY */
+
+.book-store-link.coming-soon {
+    color: #9a8d82;
+    cursor: default;
+}
+
+.book-store-link.coming-soon:hover {
+    padding-left: 5px;
+    color: #9a8d82;
+}
+
+.book-store-link.coming-soon span:last-child {
+    font-family: "Caveat", cursive;
+    font-size: 20px;
+    letter-spacing: 0;
+    color: #743344;
+}
+
+
+/* LITTLE HANDWRITTEN LINE */
+
+.book-links-handwritten {
+    font-family: "Caveat", cursive;
+    font-size: 26px;
+    color: #743344;
+    margin-top: 45px;
+    transform: rotate(-2deg);
+}
+
+
+/* BACK */
+
+.book-back {
+    display: block;
+    width: fit-content;
+    margin: 110px auto 0;
+
+    color: #743344;
+    text-decoration: none;
+
+    font-family: "Caveat", cursive;
+    font-size: 24px;
+}
+
+.book-back:hover {
+    text-decoration: underline;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 750px) {
+
+    .book-links-page {
+        padding: 90px 7vw 100px;
+    }
+
+    .book-links-page h1 {
+        font-size: 70px;
+    }
+
+    .book-links-layout {
+        grid-template-columns: 1fr;
+        gap: 70px;
+    }
+
+    .book-links-cover {
+        width: min(280px, 70vw);
+        margin: 0 auto;
+    }
+
+    .book-links-content {
+        max-width: none;
+    }
+
+}
+
